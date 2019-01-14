@@ -6,30 +6,40 @@ import OurDesign from '../components/OurDesign';
 import OurEye from '../components/OurEye';
 
 const PageContainer = styled.div`
+  position: relative;
   display: flex;
 `;
 
 const OurEyeContainer = styled.div`
+  position: relative;
   background-color: ${(props) => props.theme.offwhite};
   width: ${(props) => (props.loaded ? '185%' : '50%')};
   height: 100vh;
   transition: all 1s ease-in-out;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  overflow: scroll;
 `;
 
 const OurDesignContainer = styled.div`
+  position: relative;
   background-color: ${(props) => props.theme.beige};
   width: ${(props) => (props.loaded ? '185%' : '50%')};
   height: 100vh;
   transition: all 1s ease-in-out;
-  display: flex;
+  /* display: flex;
+  flex-direction: ${(props) => (props.loaded ? 'column' : 'row')};
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  overflow: scroll;
 `;
 
 const PageButton = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: none;
   background: none;
   font-family: ${(props) =>

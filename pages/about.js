@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const AboutPage = styled.div`
@@ -21,7 +22,7 @@ const AboutPage = styled.div`
   p {
     line-height: 1.4;
 
-    span {
+    a {
       font-family: 'Suisse Works Book', serif;
       color: ${(props) => props.theme.red};
       font-size: 1.8rem;
@@ -77,8 +78,11 @@ export class About extends Component {
         </Contact>
         <Description>
           <p>
-            <span>ar-chive</span> is an independent creative studio based in
-            Sydney, led by Angela Tam and Rowland Reyes Martinez.
+            <Link href="/">
+              <a>ar-chive</a>
+            </Link>{' '}
+            is an independent creative studio based in Sydney, led by Angela Tam
+            and Rowland Reyes Martinez.
             <br />
             Founded on honest observation, curiosity and meaningful design, the
             studio works towards realizing conceptual ideas with an artistic

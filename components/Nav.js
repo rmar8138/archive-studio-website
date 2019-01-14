@@ -7,6 +7,7 @@ const NavContainer = styled.div`
   top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10000;
 `;
 
 const Logo = styled.h1`
@@ -48,11 +49,11 @@ class Nav extends Component {
   };
 
   handleMouseEnter = () => {
-    this.setState({ isNavlistHovered: true });
+    this.setState({ isNavListHovered: true });
   };
 
   handleMouseLeave = () => {
-    this.setState({ isNavlistHovered: false });
+    this.setState({ isNavListHovered: false });
   };
 
   render() {
@@ -63,7 +64,7 @@ class Nav extends Component {
         hovered={this.state.isNavListHovered}
       >
         <Logo hovered={this.state.isNavListHovered}>ar-chive</Logo>
-        <NavList hovered={this.state.isNavlistHovered}>
+        <NavList hovered={this.state.isNavListHovered}>
           <li>
             <a href="www.ar-chivesouvenirshop">Store</a>
           </li>
