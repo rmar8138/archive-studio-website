@@ -3,8 +3,7 @@ import { Container } from 'next/app';
 import Link from 'next/link';
 import styled from 'styled-components';
 import Page from './Page';
-import MyContext from '../context';
-import OurVisionGridTemplate from './OurVisionGridTemplate';
+import OurVisionGridTemplate from '../components/grids/OurVisionGrid';
 
 const Landing = styled.div`
   height: 100vh;
@@ -36,11 +35,34 @@ export class OurVision extends Component {
             <Link href="/coolmac">
               <img src="/static/ourvision/scroll/Landing.jpg" alt="Coolmac" />
             </Link>
-
-            <Page />
           </LandingImage>
         </Landing>
-        <OurVisionGridTemplate />
+        <OurVisionGridTemplate>
+          <Link href="/posters">
+            <img src="/static/ourvision/scroll/1.jpg" alt="Posters" />
+          </Link>
+          <Link href="/hype">
+            <img src="/static/ourvision/scroll/2.jpg" alt="Hype" />
+          </Link>
+          <Link href="/micra">
+            <img src="/static/ourvision/scroll/3.jpg" alt="Micra" />
+          </Link>
+          <Link href="/pigalle">
+            <img src="/static/ourvision/scroll/4.jpg" alt="Pigalle" />
+          </Link>
+          <Link href="/inq">
+            <img src="/static/ourvision/scroll/5.jpg" alt="INQ" />
+          </Link>
+          <Link href="/nawato">
+            <img src="/static/ourvision/scroll/6.jpg" alt="Nawato" />
+          </Link>
+          <Link href="/hype">
+            <img src="/static/ourvision/scroll/7.jpg" alt="Hype 2" />
+          </Link>
+          <Link href="/priscilla">
+            <img src="/static/ourvision/scroll/8.jpg" alt="Priscilla" />
+          </Link>
+        </OurVisionGridTemplate>
       </Container>
     );
   }

@@ -76,4 +76,12 @@ const OurVisionGrid = styled.div`
   }
 `;
 
-export default OurVisionGrid;
+const OurVisionGridTemplate = (props) => (
+  <OurVisionGrid>
+    {React.Children.map(props.children, (child, index) => (
+      <div className={`item item${index + 1}`}>{child}</div>
+    ))}
+  </OurVisionGrid>
+);
+
+export default OurVisionGridTemplate;
