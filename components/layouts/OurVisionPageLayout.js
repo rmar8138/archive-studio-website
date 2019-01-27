@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 import styled from 'styled-components';
 
 export const OurVisionLayout = styled.div`
@@ -17,6 +18,7 @@ export const OurVisionBackBar = styled.button`
   background-color: ${(props) => props.theme.offwhite};
   height: 100;
   flex: 0 0 6%;
+  cursor: pointer;
 `;
 
 export const OurVisionContainer = styled.div`
@@ -31,14 +33,6 @@ export const OurVisionMain = styled.div`
   padding: 7.3vw 4.3vw 4.3vw 4.3vw;
   height: 100vh;
   display: flex;
-`;
-
-export const OurVisionPageHeader = styled.h1`
-  content: 'Our Vision';
-  display: inline-block;
-  position: absolute;
-  top: 3.6rem;
-  right: 3.6rem;
 `;
 
 export const OurVisionText = styled.div`
@@ -56,15 +50,55 @@ export const OurVisionImage = styled.div`
 export const OurVisionPageLayout = (props) => (
   <OurVisionLayout>
     <h1 className="ourvision-header">Our Vision</h1>
-    <OurVisionBackBar />
+    <OurVisionBackBar onClick={() => Router.push('/')} />
     <OurVisionContainer>{props.children}</OurVisionContainer>
   </OurVisionLayout>
 );
 
+////////////////////////////////
+// CAROUSEL PAGES
+////////////////////////////////
+
 export const OurVisionMainLayout = (props) => (
   <OurVisionMain>
-    <OurVisionPageHeader />
     <OurVisionText>{props.children}</OurVisionText>
     <OurVisionImage />
   </OurVisionMain>
 );
+
+////////////////////////////////
+// GRID ONLY PAGES
+////////////////////////////////
+
+export const OurVisionGridOnlyLayout = styled.div`
+  display: flex;
+`;
+
+export const GridOnlyTextSection = styled.div`
+  height: 100vh;
+  padding: 7.3vw 4.3vw 4.3vw 4.3vw;
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  li {
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  span {
+    font-weight: 700;
+  }
+`;
+
+export const GridOnlyGridSection = styled.div`
+  padding: 7.3vw 4.3vw 4.3vw 0;
+  height: 100vh;
+  flex: 1;
+  overflow: scroll;
+`;

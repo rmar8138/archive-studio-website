@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
 import theme from '../components/styles/Theme';
 import Nav from '../components/Nav';
 import OurVision from '../components/OurVision';

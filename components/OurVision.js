@@ -29,7 +29,7 @@ const LandingImage = styled.div`
 export class OurVision extends Component {
   render() {
     return (
-      <Container>
+      <div>
         <Landing>
           <LandingImage>
             <Link href="/coolmac">
@@ -56,14 +56,14 @@ export class OurVision extends Component {
           <Link href="/nawato">
             <img src="/static/ourvision/scroll/6.jpg" alt="Nawato" />
           </Link>
-          <Link href="/hype">
+          <Link href="/hype2">
             <img src="/static/ourvision/scroll/7.jpg" alt="Hype 2" />
           </Link>
           <Link href="/priscilla">
             <img src="/static/ourvision/scroll/8.jpg" alt="Priscilla" />
           </Link>
         </OurVisionGridTemplate>
-      </Container>
+      </div>
     );
   }
 }
