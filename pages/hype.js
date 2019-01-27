@@ -8,6 +8,16 @@ import {
 import Grid3Template from '../components/grids/Grid3';
 
 export class hype extends Component {
+  state = {
+    talent: [
+      'Amy Jane Dowdle & Josh Dowdle',
+      'Jason Vuong',
+      'Jackie Pettit',
+      'Cameron Oates',
+      'Sophie Wilde',
+    ],
+  };
+
   render() {
     const images = [];
     for (let i = 0; i < 17; i++) {
