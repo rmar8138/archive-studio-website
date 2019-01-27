@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
 import theme from '../components/styles/Theme';
 import Nav from '../components/Nav';
-import OurDesign from '../components/OurDesign';
+import OurVision from '../components/OurVision';
 import OurEye from '../components/OurEye';
 
 const PageContainer = styled.div`
@@ -16,22 +18,15 @@ const OurEyeContainer = styled.div`
   width: ${(props) => (props.loaded ? '185%' : '50%')};
   height: 100vh;
   transition: all 1s ease-in-out;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   overflow: scroll;
 `;
 
-const OurDesignContainer = styled.div`
+const OurVisionContainer = styled.div`
   position: relative;
   background-color: ${(props) => props.theme.beige};
   width: ${(props) => (props.loaded ? '185%' : '50%')};
   height: 100vh;
   transition: all 1s ease-in-out;
-  /* display: flex;
-  flex-direction: ${(props) => (props.loaded ? 'column' : 'row')};
-  justify-content: center;
-  align-items: center; */
   overflow: scroll;
 `;
 
@@ -52,15 +47,15 @@ const PageButton = styled.button`
 export class Home extends Component {
   state = {
     ourEyeLoaded: false,
-    ourDesignLoaded: false,
+    ourVisionLoaded: false,
   };
 
   ourEyeClicked = (e) => {
     e.preventDefault();
-    if (this.state.ourDesignLoaded) {
+    if (this.state.ourVisionLoaded) {
       return this.setState({
         ourEyeLoaded: true,
-        ourDesignLoaded: false,
+        ourVisionLoaded: false,
       });
     }
     this.setState({
@@ -68,16 +63,16 @@ export class Home extends Component {
     });
   };
 
-  ourDesignClicked = (e) => {
+  ourVisionClicked = (e) => {
     e.preventDefault();
     if (this.state.ourEyeLoaded) {
       return this.setState({
         ourEyeLoaded: false,
-        ourDesignLoaded: true,
+        ourVisionLoaded: true,
       });
     }
     this.setState({
-      ourDesignLoaded: true,
+      ourVisionLoaded: true,
     });
   };
 
@@ -95,15 +90,15 @@ export class Home extends Component {
             </PageButton>
             {this.state.ourEyeLoaded && <OurEye />}
           </OurEyeContainer>
-          <OurDesignContainer loaded={this.state.ourDesignLoaded}>
+          <OurVisionContainer loaded={this.state.ourVisionLoaded}>
             <PageButton
-              onClick={this.ourDesignClicked}
-              loaded={this.state.ourDesignLoaded}
+              onClick={this.ourVisionClicked}
+              loaded={this.state.ourVisionLoaded}
             >
-              Our Design
+              Our Vision
             </PageButton>
-            {this.state.ourDesignLoaded && <OurDesign />}
-          </OurDesignContainer>
+            {this.state.ourVisionLoaded && <OurVision />}
+          </OurVisionContainer>
         </PageContainer>
       </ThemeProvider>
     );

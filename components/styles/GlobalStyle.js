@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Suisse Works Book', sans-serif;
   }
 
+  p {
+    line-height: 1.4;
+  }
+
   a {
     text-decoration: none;
     color: black;

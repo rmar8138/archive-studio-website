@@ -9,6 +9,9 @@
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-img-carousel": "^1.4.1",
+    "react-slick": "^0.23.2",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^4.1.3"
   }
 }

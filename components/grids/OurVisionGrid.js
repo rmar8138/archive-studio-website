@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // Styles for repeating 8 item grid
 
-const OurDesignGrid = styled.div`
+const OurVisionGrid = styled.div`
   height: 100%;
   padding-bottom: 6rem;
   display: grid;
@@ -10,6 +10,11 @@ const OurDesignGrid = styled.div`
   grid-template-columns: 18.3vw 3.66vw 7.32vw 3.66vw 18.3vw;
   grid-template-rows: 7.32vw 25.62vw 7.32vw 7.32vw 21.96vw 7.32vw 11.71vw 21.23vw 11.71vw 7.32vw 21.96vw 7.32vw 14.64vw 18.3vw 14.64vw;
   overflow: scroll;
+
+  div {
+    height: 100%;
+    width: 100%;
+  }
 
   img {
     height: 100%;
@@ -71,4 +76,4 @@ const OurDesignGrid = styled.div`
   }
 `;
 
-export default OurDesignGrid;
+export default OurVisionGrid;
