@@ -1,32 +1,71 @@
 import React, { Component } from 'react';
+import Carousel from 'nuka-carousel';
 import CaseStudyLayout from '../components/layouts/CaseStudyLayout';
 import Grid3Template from '../components/grids/Grid3';
 import {
   OurVisionPageLayout,
-  OurVisionMainLayout,
+  OurVisionMain,
+  OurVisionText,
+  OurVisionImage,
 } from '../components/layouts/OurVisionPageLayout';
 
 export class coolmac extends Component {
   render() {
+    const images = [];
+    for (let i = 0; i < 4; i++) {
+      images.push(i);
+    }
     return (
       <div>
         <OurVisionPageLayout>
-          <OurVisionMainLayout>
-            <h1>Cool Mac</h1>
-            <p>
-              Cool Mac is a cafe in Kirribilli, Sydney, offering coffee and
-              Japanese inspired dishes for locals and tourists alike.
-              <br />
-              <br />
-              We were commissioned to create a permanent mural for their six
-              metre feature wall that would brighten up the space.
-              <br />
-              <br />
-              Through our observation and perspective of Kirribilli, we chose to
-              highlight significant structures specific to our eye and attention
-              to detail.
-            </p>
-          </OurVisionMainLayout>
+          <OurVisionMain>
+            <OurVisionText>
+              <h1>Cool Mac</h1>
+              <p>
+                Cool Mac is a cafe in Kirribilli, Sydney, offering coffee and
+                Japanese inspired dishes for locals and tourists alike.
+                <br />
+                <br />
+                We were commissioned to create a permanent mural for their six
+                metre feature wall that would brighten up the space.
+                <br />
+                <br />
+                Through our observation and perspective of Kirribilli, we chose
+                to highlight significant structures specific to our eye and
+                attention to detail.
+              </p>
+            </OurVisionText>
+            <OurVisionImage>
+              <Carousel
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button
+                    onClick={previousSlide}
+                    style={{
+                      opacity: '0',
+                      outline: 'none',
+                    }}
+                  />
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button
+                    onClick={nextSlide}
+                    style={{
+                      opacity: '0',
+                      outline: 'none',
+                    }}
+                  />
+                )}
+              >
+                {images.map((key) => (
+                  <img
+                    src={`static/ourvision/coolmac/${key + 1}.jpg`}
+                    alt={`Coolmac ${key + 1}`}
+                    key={key}
+                  />
+                ))}
+              </Carousel>
+            </OurVisionImage>
+          </OurVisionMain>
           <CaseStudyLayout name="Cool Mac">
             <Grid3Template>
               <img

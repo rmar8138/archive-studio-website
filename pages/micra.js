@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Carousel from 'nuka-carousel';
 import CaseStudyLayout from '../components/layouts/CaseStudyLayout';
 import Grid3Template from '../components/grids/Grid3';
 import {
   OurVisionPageLayout,
-  OurVisionMainLayout,
+  OurVisionMain,
+  OurVisionText,
+  OurVisionImage,
 } from '../components/layouts/OurVisionPageLayout';
 
 export class micra extends Component {
@@ -11,21 +14,51 @@ export class micra extends Component {
     return (
       <div>
         <OurVisionPageLayout>
-          <OurVisionMainLayout>
-            <h1>Micra</h1>
-            <p>
-              Micra brings together multi-insrumentalist, Robbie Cain and
-              singer-guitarist, Ivana Kay.
-              <br />
-              <br />
-              The Sydney based duo create a wistful, atmospheric sound, with
-              floating nostalgic melodies and vulnerable lyrical composition.
-              <br />
-              <br />
-              We had the pleasure of art directing and designing their covers
-              for two debut singles, ‘Child Grows Old’ and ‘Plastic’.
-            </p>
-          </OurVisionMainLayout>
+          <OurVisionMain>
+            <OurVisionText>
+              <h1>Micra</h1>
+              <p>
+                Micra brings together multi-insrumentalist, Robbie Cain and
+                singer-guitarist, Ivana Kay.
+                <br />
+                <br />
+                The Sydney based duo create a wistful, atmospheric sound, with
+                floating nostalgic melodies and vulnerable lyrical composition.
+                <br />
+                <br />
+                We had the pleasure of art directing and designing their covers
+                for two debut singles, ‘Child Grows Old’ and ‘Plastic’.
+              </p>
+            </OurVisionText>
+            <OurVisionImage>
+              <Carousel
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button
+                    onClick={previousSlide}
+                    style={{
+                      opacity: '0',
+                      outline: 'none',
+                    }}
+                  />
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button
+                    onClick={nextSlide}
+                    style={{
+                      opacity: '0',
+                      outline: 'none',
+                    }}
+                  />
+                )}
+              >
+                <img src="static/ourvision/micra/1.png" alt="Micra 1" />
+                <img src="static/ourvision/micra/2.jpg" alt="Micra 2" />
+                <img src="static/ourvision/micra/3.jpg" alt="Micra 3" />
+                <img src="static/ourvision/micra/4.jpg" alt="Micra 4" />
+                <img src="static/ourvision/micra/5.png" alt="Micra 5" />
+              </Carousel>
+            </OurVisionImage>
+          </OurVisionMain>
           <CaseStudyLayout name="Micra">
             <Grid3Template>
               <img

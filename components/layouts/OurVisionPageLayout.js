@@ -36,6 +36,7 @@ export const OurVisionMain = styled.div`
 `;
 
 export const OurVisionText = styled.div`
+  padding-right: 4.3vw;
   flex: 0 0 50%;
 
   h1 {
@@ -44,7 +45,13 @@ export const OurVisionText = styled.div`
 `;
 
 export const OurVisionImage = styled.div`
+  width: 43vw;
+  height: 43vw;
   flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const OurVisionPageLayout = (props) => (

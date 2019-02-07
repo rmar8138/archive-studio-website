@@ -1,6 +1,8 @@
 import App, { Container } from 'next/app';
 import MyContext from '../context';
 import Page from '../components/Page';
+require('slick-carousel/slick/slick.css');
+require('slick-carousel/slick/slick-theme.css');
 
 class MyApp extends App {
   componentDidMount() {
