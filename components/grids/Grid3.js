@@ -16,6 +16,7 @@ const Grid3 = styled.div`
   p {
     font-family: 'Suisse Works Book';
     color: ${(props) => props.theme.beige};
+    line-height: 1.6;
   }
 
   img {

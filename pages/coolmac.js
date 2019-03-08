@@ -13,7 +13,7 @@ export class coolmac extends Component {
   render() {
     const images = [];
     for (let i = 0; i < 4; i++) {
-      images.push(i);
+      images.push(i + 1);
     }
     return (
       <div>
@@ -58,8 +58,8 @@ export class coolmac extends Component {
               >
                 {images.map((key) => (
                   <img
-                    src={`static/ourvision/coolmac/${key + 1}.jpg`}
-                    alt={`Coolmac ${key + 1}`}
+                    src={`static/ourvision/coolmac/${key}.jpg`}
+                    alt={`Coolmac ${key}`}
                     key={key}
                   />
                 ))}

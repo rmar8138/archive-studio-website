@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styled, { ThemeProvider } from 'styled-components';
+import { leftSideOpen, rightSideOpen } from '../actions/layoutActions';
 import theme from '../components/styles/Theme';
 import Nav from '../components/Nav';
 import OurVision from '../components/OurVision';

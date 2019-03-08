@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     font-family: 'Suisse Intl Regular', sans-serif;
   }
 

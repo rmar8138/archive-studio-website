@@ -1,4 +1,7 @@
 import App, { Container } from 'next/app';
+import { Provider } from 'react-redux';
+import withRedux from 'next-redux-wrapper';
+import store from '../store/store';
 import MyContext from '../context';
 import Page from '../components/Page';
 require('slick-carousel/slick/slick.css');
@@ -10,22 +13,18 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component } = this.props;
+    const { Component, store } = this.props;
 
     return (
-      <MyContext.Provider
-        value={{
-          Component: Component,
-        }}
-      >
+      <Provider store={store}>
         <Container>
           <Page>
             <Component />
           </Page>
         </Container>
-      </MyContext.Provider>
+      </Provider>
     );
   }
 }
 
-export default MyApp;
+export default withRedux(store)(MyApp);
